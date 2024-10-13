@@ -27,9 +27,9 @@ myForm.addEventListener("submit", function(event){
     age = myAge.value;
 
    if (age < ageDiscount18){
-        totalPrice = totalPrice * discount18 / 100;
+        totalPrice -= totalPrice * discount18 / 100;
    } else if (age > ageDiscount65){
-        totalPrice = totalPrice * discount65 / 100;
+        totalPrice -= totalPrice * discount65 / 100;
    }
 
    totalPrice = totalPrice.toFixed(2);
